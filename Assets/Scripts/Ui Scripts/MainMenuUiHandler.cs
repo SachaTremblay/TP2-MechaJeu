@@ -10,7 +10,7 @@ public class MainMenuUiHandler : MonoBehaviour
     public void Start()
     {
         if (PlayerPrefs.HasKey("HighScore")) m_HighScore.text = "Highscore: " + PlayerPrefs.GetFloat("HighScore").ToString();
-        else m_HighScore.text = "Highscore: No highcore has been found.. Please play at least once to set one";
+        else m_HighScore.text = "Highscore: No highscore has been found.. Play at least once to set one";
     }
     public void OnPlayClicked()
     {

@@ -61,7 +61,6 @@
     <Compile Include="Assets\Scripts\Ui Scripts\MainMenuUiHandler.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\CameraFollow.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\PlatFormSpawner.cs" />
-    <Compile Include="Assets\Scripts\Game Scripts\Losing.cs" />
     <Compile Include="Assets\Scripts\Ui Scripts\GameUiHandler.cs" />
     <Compile Include="Assets\Scripts\Ui Scripts\LoseUiHandler.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\PlayerMovements.cs" />
