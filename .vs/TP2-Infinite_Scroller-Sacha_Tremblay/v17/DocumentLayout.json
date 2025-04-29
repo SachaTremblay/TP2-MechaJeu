@@ -3,15 +3,15 @@
   "WorkspaceRootPath": "D:\\2430055\\Unity\\TP2-Infinite_Scroller-Sacha_Tremblay\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6BBDCA30-DFF4-FE13-E7E4-B0E60C8C72F3}|Assembly-CSharp.csproj|D:\\2430055\\Unity\\TP2-Infinite_Scroller-Sacha_Tremblay\\assets\\scripts\\ui scripts\\gameuihandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BBDCA30-DFF4-FE13-E7E4-B0E60C8C72F3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui scripts\\gameuihandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6BBDCA30-DFF4-FE13-E7E4-B0E60C8C72F3}|Assembly-CSharp.csproj|D:\\2430055\\Unity\\TP2-Infinite_Scroller-Sacha_Tremblay\\assets\\scripts\\game scripts\\playermovements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BBDCA30-DFF4-FE13-E7E4-B0E60C8C72F3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\game scripts\\playermovements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BBDCA30-DFF4-FE13-E7E4-B0E60C8C72F3}|Assembly-CSharp.csproj|d:\\2430055\\unity\\tp2-infinite_scroller-sacha_tremblay\\assets\\scripts\\ui scripts\\loseuihandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6BBDCA30-DFF4-FE13-E7E4-B0E60C8C72F3}|Assembly-CSharp.csproj|d:\\2430055\\unity\\tp2-infinite_scroller-sacha_tremblay\\assets\\scripts\\ui scripts\\gameuihandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BBDCA30-DFF4-FE13-E7E4-B0E60C8C72F3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui scripts\\gameuihandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BBDCA30-DFF4-FE13-E7E4-B0E60C8C72F3}|Assembly-CSharp.csproj|D:\\2430055\\Unity\\TP2-Infinite_Scroller-Sacha_Tremblay\\assets\\scripts\\ui scripts\\loseuihandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6BBDCA30-DFF4-FE13-E7E4-B0E60C8C72F3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui scripts\\loseuihandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -30,8 +30,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -40,33 +44,33 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Ui Scripts\\LoseUiHandler.cs",
               "ToolTip": "D:\\2430055\\Unity\\TP2-Infinite_Scroller-Sacha_Tremblay\\Assets\\Scripts\\Ui Scripts\\LoseUiHandler.cs",
               "RelativeToolTip": "Assets\\Scripts\\Ui Scripts\\LoseUiHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBYAAABcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-24T18:10:06.828Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "GameUiHandler.cs",
               "DocumentMoniker": "D:\\2430055\\Unity\\TP2-Infinite_Scroller-Sacha_Tremblay\\Assets\\Scripts\\Ui Scripts\\GameUiHandler.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Ui Scripts\\GameUiHandler.cs",
               "ToolTip": "D:\\2430055\\Unity\\TP2-Infinite_Scroller-Sacha_Tremblay\\Assets\\Scripts\\Ui Scripts\\GameUiHandler.cs",
               "RelativeToolTip": "Assets\\Scripts\\Ui Scripts\\GameUiHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-17T19:35:27.925Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "PlayerMovements.cs",
               "DocumentMoniker": "D:\\2430055\\Unity\\TP2-Infinite_Scroller-Sacha_Tremblay\\Assets\\Scripts\\Game Scripts\\PlayerMovements.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Game Scripts\\PlayerMovements.cs",
               "ToolTip": "D:\\2430055\\Unity\\TP2-Infinite_Scroller-Sacha_Tremblay\\Assets\\Scripts\\Game Scripts\\PlayerMovements.cs",
               "RelativeToolTip": "Assets\\Scripts\\Game Scripts\\PlayerMovements.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowDsAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-17T19:33:11.036Z",
               "EditorCaption": ""
@@ -92,9 +96,10 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Game Scripts\\PlatFormSpawner.cs",
               "ToolTip": "D:\\2430055\\Unity\\TP2-Infinite_Scroller-Sacha_Tremblay\\Assets\\Scripts\\Game Scripts\\PlatFormSpawner.cs",
               "RelativeToolTip": "Assets\\Scripts\\Game Scripts\\PlatFormSpawner.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T17:05:56.659Z"
+              "WhenOpened": "2025-04-24T17:05:56.659Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -244,6 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f55324986a6a5f64e876f12fe241d2e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_GameUI: {fileID: 1623328046}
   m_Speed: 8
   m_JumpForce: 5
   m_CoinTotal: 0
@@ -1426,7 +1427,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 2
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1588,7 +1589,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80b556419c8e0e74786717e948b6993e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlayerXPos: {fileID: 48452999}
   m_PlayerControls: {fileID: 1612753261}
   m_Distance: {fileID: 1037218925}
   m_CoinCollected: {fileID: 1984938648}
