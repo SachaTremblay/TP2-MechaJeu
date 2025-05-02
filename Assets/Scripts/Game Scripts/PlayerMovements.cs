@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,20 +10,23 @@ public class PlayerMovements : MonoBehaviour
     [SerializeField] GameUiHandler m_GameUI;
     [SerializeField] private float m_Speed;
     [SerializeField] private float m_JumpForce;
+    [SerializeField] private AudioClip m_CoinSFX;
     float m_FinalScore;
     float m_Distance;
     float m_CoinValue = 25;
-    public float m_CoinTotal = 0;
-    public float m_CollectedCoins = 0;
+    float m_CoinTotal = 0;
+    float m_CollectedCoins = 0;
     bool m_GameStarted = false;
-    bool m_IsOnGround = false;
+    bool m_IsOnGround;
     bool m_DoubleJump = false;
     Rigidbody2D m_RigidBody2D;
     Animator m_Animation;
+    AudioSource m_AudioSource;
     void Start()
     {
         m_Animation = GetComponent<Animator>();
         m_RigidBody2D = GetComponent<Rigidbody2D>();
+        m_AudioSource = GetComponent<AudioSource>();
         if (m_GameUI != null)
         {
             m_GameUI.NotifyPlayerCoinPointsChanged(m_CoinTotal);
@@ -44,8 +48,10 @@ public class PlayerMovements : MonoBehaviour
         //Starts All Running Related
         else if (m_GameStarted)
         {
-            m_Speed = m_Speed * (1 + (transform.position.x / 1000));
-            transform.Translate(Vector3.right * m_Speed * Time.deltaTime);
+            Vector3 CalcVelocity = m_RigidBody2D.velocity;
+            CalcVelocity.x = m_Speed * (1 + (transform.position.x / 1000));
+            print(CalcVelocity.x);
+            m_RigidBody2D.velocity = CalcVelocity;
             m_Animation.SetBool("Running", true);
         }
     }
@@ -78,20 +84,6 @@ public class PlayerMovements : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ground") m_IsOnGround = true; //Jump
-        else m_IsOnGround = false;
-        //Coin Points
-        if (collision.gameObject.tag == "Coin")
-        {
-            m_CoinTotal += m_CoinValue;
-            m_CollectedCoins++;
-            if (m_GameUI != null)
-            {
-                m_GameUI.NotifyPlayerCoinPointsChanged(m_CoinTotal);
-                m_GameUI.NotifyPlayerCoinAmmountChanged(m_CollectedCoins);
-            }
-            Destroy(collision.gameObject);
-        }
         //Death and HighScore
         if (collision.gameObject.tag == "Obstacle")
         {
@@ -106,5 +98,31 @@ public class PlayerMovements : MonoBehaviour
             PlayerPrefs.SetFloat("FinalScore", m_FinalScore);
             SceneManager.LoadScene("LosingScreen");
         }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //Coin Points
+        if (collision.gameObject.tag == "Coin")
+        {
+            m_CoinTotal += m_CoinValue;
+            m_CollectedCoins++;
+            if (m_GameUI != null)
+            {
+                m_GameUI.NotifyPlayerCoinPointsChanged(m_CoinTotal);
+                m_GameUI.NotifyPlayerCoinAmmountChanged(m_CollectedCoins);
+            }
+            Destroy(collision.gameObject);
+        }
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            m_AudioSource.clip = m_CoinSFX;
+            m_AudioSource.Play();
+            m_IsOnGround = true;
+            m_DoubleJump = true;
+        }
+        else m_IsOnGround = false; //Avoid pseudo infinite jumps
     }
 }

@@ -94,11 +94,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3515108456819409571}
   - component: {fileID: 6015020660072439296}
-  - component: {fileID: 847382302634456600}
-  - component: {fileID: 4643354009384407569}
+  - component: {fileID: 6665741599286320768}
   m_Layer: 0
   m_Name: SnowyPot (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170,8 +169,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &847382302634456600
-BoxCollider2D:
+--- !u!70 &6665741599286320768
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -203,30 +202,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.625}
-    newSize: {x: 0.5, y: 0.625}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.625}
-  m_EdgeRadius: 0
---- !u!114 &4643354009384407569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3407510777266020277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28d91019fffed514a8662b68b292b515, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Size: {x: 0.55, y: 0.7}
+  m_Direction: 0
 --- !u!1 &4099307227112177304
 GameObject:
   m_ObjectHideFlags: 0
@@ -573,6 +550,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4238886275829430379}
   - component: {fileID: 146332336297944340}
+  - component: {fileID: 3119163804888496916}
   m_Layer: 0
   m_Name: IcyPlatform1_Pot
   m_TagString: Ground
@@ -649,6 +627,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.05, y: 1.05}
   m_EdgeRadius: 0
+--- !u!50 &3119163804888496916
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7183739371972272186}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
 --- !u!1 &7286453648472018786
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,13 +6,13 @@ public class PlatFormSpawner : MonoBehaviour
 {
     [SerializeField] private List<GameObject> Biome1;
     [SerializeField] private List<GameObject> Biome2;
-    [SerializeField] private List<GameObject> Biome3;
     [SerializeField] private Transform m_StartingPlatform;
     [SerializeField] private Transform m_Player;
     [SerializeField] private float m_DistanceForPlatformSpawn = 8;
     [SerializeField] private int m_MaxPlatformCount;
     private int m_PlatformChoice;
     private int m_Biome;
+    private int m_BiomeCount = 2;
     private Queue<Transform> m_PlatformQueue;
     private Transform m_LastCreatedPlatform;
     void Start()
@@ -41,7 +41,7 @@ public class PlatFormSpawner : MonoBehaviour
     {
         if(m_Biome == 1)
         {
-            m_PlatformChoice = Random.Range(1, 10);
+            m_PlatformChoice = Random.Range(1, 11);
             return Biome1[m_PlatformChoice];
         }
         if(m_Biome == 2)
@@ -49,16 +49,11 @@ public class PlatFormSpawner : MonoBehaviour
             m_PlatformChoice = Random.Range(1, 8);
             return Biome2[m_PlatformChoice];
         }
-        if(m_Biome == 3)
-        {
-            m_PlatformChoice = Random.Range(1, 8);
-            return Biome3[m_PlatformChoice];
-        }
-        return Biome1[Random.Range(1,8)];
+        return Biome1[Random.Range(1,8)]; //This line is to avoid errors as its never gonna be reached, its to assure the fonctionning of the 2 upper if functions 
     }
     private void BiomeGenerator()
     {
-        m_Biome = ((int)m_Player.transform.position.x / 100) % 3;
+        m_Biome = ((int)m_Player.transform.position.x / 100) % m_BiomeCount;
     }
     private Transform SpawnNewPlatform(Vector3 PlatformPosition)
     {
